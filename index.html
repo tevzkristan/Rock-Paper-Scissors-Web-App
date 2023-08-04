@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+
+  <section>
+    <div class="div-game">
+      <div class="header-div">
+        <div class="text">
+          <img class="logo" src="./images/logo.svg" alt="">
+        </div>
+
+        <div class="score-div">
+          <h2 class="score">SCORE</h2>
+          <h1 id="score-value"></h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="game" class="game">
+
+      <div class="blue-yellow">
+      <div onclick="playGame('paper')"  class="big-circle blue">
+        <div class="small-circle">
+          <img src="./images/icon-paper.svg" alt="" class="icon">
+        </div>
+      </div>
+
+      <div onclick="playGame('scissors')"  class="big-circle yellow">
+        <div class="small-circle">
+          <img src="./images/icon-scissors.svg" alt="" class="icon">
+        </div>
+      </div>
+    </div>
+      <div onclick="playGame('rock')" class="big-circle red">
+        <div class="small-circle">
+          <img src="./images/icon-rock.svg" alt="" class="icon">
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="game-result-div-id" class="game-result-div-notactive">
+
+    
+      <div class="icons-result">
+        <!-- User's choice -->
+        <div class="user-choice-div">
+          <h1 class="picked">YOU PICKED</h1>
+        <div id="big-circle-person"class="big-circle">
+          <div class="small-circle">
+            <img id="picked-icon" src="path/to/your_user_icon.png" alt="" class="icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="win-info">
+        <h1 id="text-info"></h1>
+        <button onclick="pageReload()" id="play-again">PLAY AGAIN</button>
+      </div>
+    
+        <!-- House's choice -->
+        <div class="user-choice-div">
+        <h1 class="picked">THE HOUSE PICKED</h1>
+        <div id="big-circle-computer" class="big-circle">
+          <div class="small-circle">
+            <img id="computer-picked-icon" src="path/to/house_icon.png" alt="" class="icon">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <button onclick="rulesShow()" class="rules">RULES</button>
+    <div id="black-opacity" class="black-opacity"></div>
+    <div id="rules-div" class="rules-div">
+      <div class="rules-text">
+      <h1 style="color: hsl(229, 25%, 31%); font-size: 48px;">RULES</h1>
+      <img onclick="closeRules()" class="close" src="./images/icon-close.svg" alt="">
+     </div>
+      <img style="transform: scale(1.3);" src="./images/image-rules.svg" alt="">
+    </div>
+  </section>
+  
+  <script src="app.js"></script>
+</body>
+</html>
